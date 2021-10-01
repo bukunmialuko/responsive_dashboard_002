@@ -77,6 +77,49 @@ class SideMenu extends StatelessWidget {
           ),
           SideMenuTile(model: applicationsMenu),
           SideMenuTile(model: dashboard2Menu),
+          Padding(
+            padding: EdgeInsets.fromLTRB(0, 16, 0, 8),
+            child: Text(
+              "Foundation",
+              style: Theme.of(context).textTheme.subtitle1!.copyWith(color: Color(0xffCCCEDD)),
+            ),
+          ),
+          ListTile(
+            onTap: () {},
+            horizontalTitleGap: 0.0,
+            leading: SvgPicture.asset(
+              "assets/icons/menu_airline_seat_flat_angled.svg",
+              height: 16,
+            ),
+            title: Text(
+              "Elements",
+              style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Color(0xff242E6F)),
+            ),
+          ),
+          ListTile(
+            onTap: () {},
+            horizontalTitleGap: 0.0,
+            leading: SvgPicture.asset(
+              "assets/icons/menu_airline_seat_flat_angled.svg",
+              height: 16,
+            ),
+            title: Text(
+              "Widgets",
+              style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Color(0xff242E6F)),
+            ),
+          ),
+          ListTile(
+            onTap: () {},
+            horizontalTitleGap: 0.0,
+            leading: SvgPicture.asset(
+              "assets/icons/menu_airline_seat_flat_angled.svg",
+              height: 16,
+            ),
+            title: Text(
+              "Plugins",
+              style: Theme.of(context).textTheme.subtitle2!.copyWith(color: Color(0xff242E6F)),
+            ),
+          ),
         ],
       ),
     );
