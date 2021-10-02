@@ -12,6 +12,7 @@ class SubHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(defaultPadding),
       child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
             "Hello, Randy!",
