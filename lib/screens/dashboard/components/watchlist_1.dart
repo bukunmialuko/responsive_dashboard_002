@@ -200,8 +200,8 @@ class _WatchList1State extends State<WatchList1> {
     return <ChartSeries<_SplineAreaData, double>>[
       SplineAreaSeries<_SplineAreaData, double>(
         dataSource: chartData,
-        color: const Color.fromRGBO(75, 135, 185, 0.6),
-        borderColor: const Color.fromRGBO(75, 135, 185, 1),
+        color: const Color(0x3344D600),
+        borderColor: const Color(0xff44D600),
         borderWidth: 1,
         name: 'India',
         xValueMapper: (_SplineAreaData sales, _) => sales.year,
