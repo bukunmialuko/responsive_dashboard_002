@@ -16,6 +16,7 @@ class Wallet extends StatelessWidget {
           Expanded(
             flex: 7,
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 Row(
                   children: [
@@ -61,55 +62,56 @@ class Wallet extends StatelessWidget {
             ),
           ),
           Expanded(
-              flex: 3,
-              child: Container(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      "Account Security",
-                      style:
-                          Theme.of(context).textTheme.headline6!.copyWith(color: Color(0xff223354)),
-                    ),
-                    Container(
-                      child: ListView.builder(
-                        shrinkWrap: true,
-                        itemCount: 4,
-                        itemBuilder: (c, i) => ListTile(
-                          contentPadding: EdgeInsets.zero,
-                          onTap: () {},
-                          horizontalTitleGap: 0.0,
-                          leading: Image.asset(
-                            "assets/icons/btc.png",
-                            height: 44,
-                            fit: BoxFit.cover,
-                          ),
-                          title: Text(
-                            "2FA Authentication",
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle2!
-                                .copyWith(color: Color(0xff242E6F)),
-                          ),
-                          subtitle: Text(
-                            "Disabled",
-                            style: Theme.of(context)
-                                .textTheme
-                                .subtitle2!
-                                .copyWith(color: Color(0xff242E6F)),
-                          ),
-                          trailing: Switch(
-                            value: true,
-                            onChanged: (value) {},
-                            activeTrackColor: Colors.lightGreenAccent,
-                            activeColor: Colors.green,
-                          ),
+            flex: 3,
+            child: Container(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "Account Security",
+                    style:
+                        Theme.of(context).textTheme.headline6!.copyWith(color: Color(0xff223354)),
+                  ),
+                  Container(
+                    child: ListView.builder(
+                      shrinkWrap: true,
+                      itemCount: 4,
+                      itemBuilder: (c, i) => ListTile(
+                        contentPadding: EdgeInsets.zero,
+                        onTap: () {},
+                        horizontalTitleGap: 0.0,
+                        leading: Image.asset(
+                          "assets/icons/btc.png",
+                          height: 44,
+                          fit: BoxFit.cover,
+                        ),
+                        title: Text(
+                          "2FA Authentication",
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle2!
+                              .copyWith(color: Color(0xff242E6F)),
+                        ),
+                        subtitle: Text(
+                          "Disabled",
+                          style: Theme.of(context)
+                              .textTheme
+                              .subtitle2!
+                              .copyWith(color: Color(0xff242E6F)),
+                        ),
+                        trailing: Switch(
+                          value: true,
+                          onChanged: (value) {},
+                          activeTrackColor: Colors.lightGreenAccent,
+                          activeColor: Colors.green,
                         ),
                       ),
                     ),
-                  ],
-                ),
-              ))
+                  ),
+                ],
+              ),
+            ),
+          )
         ],
       ),
     );
